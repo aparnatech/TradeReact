@@ -1,26 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import Getpost from './components/getpost';
+import { Route, BrowserRouter as Router } from 'react-router-dom';
+import ListUser from './components/listuser';
+import tagsearch from './components/tagsearch';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <Router>
+        <div className="App">
+          <Route exact path="/" component={tagsearch} />
+          <Route exact path="/users" component={ListUser} />
+          <Route exact path="/users/:id/posts" render={props => <Getpost {...props} />} />
+        </div>
+      </Router>
+    );
+  }
 }
 
 export default App;

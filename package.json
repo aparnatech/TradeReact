@@ -3,9 +3,18 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^4.6.0",
+    "axios": "^0.19.0",
+    "material-ui-chip-input": "^2.0.0-beta.1",
+    "material-ui-upload": "^1.2.1",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
-    "react-scripts": "3.2.0"
+    "react-material-ui-form": "^1.1.4",
+    "react-modal": "^3.11.1",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.2.0",
+    "react-tag-input": "^6.4.1",
+    "reactstrap": "^8.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
